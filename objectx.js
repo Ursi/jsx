@@ -1,5 +1,5 @@
 const objectx = {
-    getPath(...path) {
+    getPath(path) {
         let value = this;
 		for (let pathPart of path) {
 		    value = value[pathPart];

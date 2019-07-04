@@ -1,5 +1,5 @@
 ### `buildIn()`
 Adds the `objectx` functions to `Object.prototype`.
 
-### `obj.getPath(...parts)`
-**Returns:** `obj[parts[0]][parts[1]]...[parts[parts.length - 1]]`
+### `obj.getPath(path)`
+**Returns:** `obj[path[0]][path[1]]...[path[path.length - 1]]`
