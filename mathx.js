@@ -1,3 +1,5 @@
+import buildIn from './buildIn.js';
+
 const mathx = {
     randInt(lower, upper) {
         if (upper) {
@@ -8,7 +10,6 @@ const mathx = {
     },
 }
 
-import buildIn from './buildIn.js';
 Object.defineProperty(mathx, 'buildIn', {value: buildIn(Math, true)});
 
 export default mathx;

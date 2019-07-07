@@ -1,3 +1,9 @@
+import arrayx from './arrayx.js'; export {arrayx};
+import mathx from './mathx.js'; export {mathx};
+import stringx from './stringx.js'; export {stringx};
+import buildIn from './buildIn.js';
+
+
 const jsx = {
 	transWait(elem) {
 	    return new Promise(resolve => {
@@ -8,11 +14,6 @@ const jsx = {
 	    })
 	}
 };
-
-import arrayx from './arrayx.js'; export {arrayx};
-import mathx from './mathx.js'; export {mathx};
-import stringx from './stringx.js'; export {stringx};
-import buildIn from './buildIn.js';
 
 Object.defineProperties(jsx, {
     buildIn: {

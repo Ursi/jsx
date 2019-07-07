@@ -4,6 +4,7 @@ Firefox adds support of named caputre groups
 */
 
 import mathx from './mathx.js';
+import buildIn from './buildIn.js';
 
 const arrayx = {
     keySort(...keys) {
@@ -70,7 +71,6 @@ const arrayx = {
     },
 };
 
-import buildIn from './buildIn.js';
 Object.defineProperty(arrayx, 'buildIn', {value: buildIn(Array.prototype)});
 
 export default arrayx;

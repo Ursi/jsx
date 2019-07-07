@@ -1,3 +1,5 @@
+import buildIn from './buildIn.js';
+
 const stringx = {
     toArray(){
         let array = [];
@@ -9,7 +11,6 @@ const stringx = {
     },
 };
 
-import buildIn from './buildIn.js';
 Object.defineProperty(stringx, 'buildIn', {value: buildIn(String.prototype)});
 
 export default stringx;

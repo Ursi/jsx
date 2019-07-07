@@ -1,3 +1,5 @@
+import buildIn from './buildIn.js';
+
 const objectx = {
     getPath(path) {
         let value = this;
@@ -9,7 +11,6 @@ const objectx = {
     },
 };
 
-import buildIn from './buildIn.js';
 Object.defineProperty(objectx, 'buildIn', {value: buildIn(Object.prototype)});
 
 export default objectx;
