@@ -7,7 +7,7 @@ import mathx from './mathx.js';
 import buildIn from './buildIn.js';
 
 const arrayx = {
-    keySort(...keys) {
+    propSort(...keys) {
         function standardSort(a, b) {
             return a < b ? -1 : 1;
         }
