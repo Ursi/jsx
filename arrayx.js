@@ -53,7 +53,17 @@ const arrayx = {
             }
         }
 
-        return this.sort((a, b) => sortFunc(a, b, keys[0], keys.slice(1)));
+        if (keys.length === 0) {
+            let l = this[0].length;
+            let rest = [];
+            for (let i = 1; i <= l - 1; i++) {
+                rest.push(i);
+            }
+
+            return this.sort((a, b) => sortFunc(a, b, 0, rest));
+        } else {
+            return this.sort((a, b) => sortFunc(a, b, keys[0], keys.slice(1)));
+        }
     },
     randomRemove(){
         let i = mathx.randInt(this.length);
