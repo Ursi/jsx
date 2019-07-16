@@ -5,16 +5,7 @@ import stringx from './stringx.js'; export {stringx};
 import buildIn from './buildIn.js';
 
 
-const jsx = {
-	transWait(elem) {
-	    return new Promise(resolve => {
-	        elem.addEventListener('transitionend', function f() {
-	            elem.removeEventListener('transitionend', f);
-	            resolve();
-	        });
-	    })
-	}
-};
+const jsx = {};
 
 Object.defineProperties(jsx, {
     buildIn: {
