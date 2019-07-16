@@ -8,21 +8,21 @@ import buildIn from './buildIn.js';
 const jsx = {};
 
 Object.defineProperties(jsx, {
-    buildIn: {
-        value: function(){
+	buildIn: {
+		value: function(){
 			buildIn(globalThis).call(jsx);
 			for (let submodule of Object.values(this.submodules)) {
-			    submodule.buildIn();
+				submodule.buildIn();
 			}
 		},
-    },
+	},
 	submodules: {
-	    value: {
+		value: {
 			arrayx: arrayx,
 			mathx: mathx,
 			setx: setx,
 			stringx: stringx,
-	    },
+		},
 	},
 });
 
