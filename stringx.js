@@ -1,15 +1,6 @@
 import buildIn from './buildIn.js';
 
-const stringx = {
-	toArray(){
-		let array = [];
-		for (let char of this) {
-			array.push(char);
-		}
-
-		return array;
-	},
-};
+const stringx = {};
 
 Object.defineProperty(stringx, 'buildIn', {value: buildIn(String.prototype)});
 
