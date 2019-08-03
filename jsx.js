@@ -4,7 +4,6 @@ import setx from './setx.js'; export {setx};
 import stringx from './stringx.js'; export {stringx};
 import buildIn from './buildIn.js';
 
-
 const jsx = {};
 
 Object.defineProperties(jsx, {
