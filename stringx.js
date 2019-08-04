@@ -1,6 +1,11 @@
 import buildIn from './buildIn.js';
 
 const stringx = {
+	String: {
+		test() {
+			console.log("this is from String");
+		},
+	},
 	toReStr(re = false){
 		let str = this.replace(/\\/g, '\\\\').replace(/([$\(\)*+\.?\[\]^])/g, '\\$1');
 		if (re) {
