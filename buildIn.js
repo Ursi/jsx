@@ -1,11 +1,12 @@
-export default (obj, enumerable = false) => {
+export default (obj) => {
 	return function(){
-		for (let [name, method] of Object.entries(this)) {
-			Object.defineProperty(obj, name, {
-				value: method,
-				writable: true,
-				enumerable: enumerable,
-			});
+		for (let [name, descriptor] of Object.entries(Object.getOwnPropertyDescriptors(this))) {
+			let newDescriptor = descriptor;
+			if (!('get' in descriptor)) {
+				newDescriptor.value = this[name];
+			}
+
+			Object.defineProperty(obj, name, newDescriptor);
 		}
 	}
 }

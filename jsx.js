@@ -9,7 +9,7 @@ const jsx = {
 		let str = '';
 		for (var i = 0; i < params.length; i++) {
 			let literal = literals[i].match(/(?<rest>.*?)(?<tabs>\t*)$/s).groups;
-			str += literal.rest
+			str += literal.rest;
 			str += params[i].split('\n').map(line => literal.tabs + line).join('\n');
 		}
 
