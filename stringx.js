@@ -7,7 +7,7 @@ const stringx = {
 			for (var i = 0; i < params.length; i++) {
 				let literal = literals[i].match(/(?<rest>.*?)(?<tabs>\t*)$/s).groups;
 				str += literal.rest;
-				str += params[i].split('\n').map(line => literal.tabs + line).join('\n');
+				str += String(params[i]).split('\n').map(line => literal.tabs + line).join('\n');
 			}
 
 			str += literals[i];
