@@ -2,12 +2,12 @@ import buildIn from './buildIn.js';
 
 const stringx = {
 	String: {
-		ii(literals, ...params) {
+		ii(literals, ...args) {
 			let str = '';
-			for (var i = 0; i < params.length; i++) {
+			for (var i = 0; i < args.length; i++) {
 				let literal = literals[i].match(/(?<rest>.*?)(?<tabs>\t*)$/s).groups;
 				str += literal.rest;
-				str += String(params[i]).split('\n').map(line => literal.tabs + line).join('\n');
+				str += String(args[i]).split('\n').map(line => literal.tabs + line).join('\n');
 			}
 
 			str += literals[i];
